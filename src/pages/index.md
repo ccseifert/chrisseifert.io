@@ -2,8 +2,6 @@
 templateKey: index-page
 title: Chris Writes Things
 image: /img/apple-touch-icon.png
-heading: " a"
-subheading: a
 mainpitch:
   title: I build impactful, cohesive development teams to solve difficult problems.
   description: |-
