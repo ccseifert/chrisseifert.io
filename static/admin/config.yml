@@ -47,7 +47,6 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
-          - { label: Image, name: image, widget: image }
           - {
               label: Mainpitch,
               name: mainpitch,

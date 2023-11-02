@@ -1,20 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import { getImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import FullWidthImage from '../components/FullWidthImage'
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({ image, title, mainpitch, description, intro }) => {
-    const heroImage = getImage(image) || image
-
+export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
     return (
         <div>
-            <FullWidthImage img={heroImage} title={title} />
             <section className="section section--gradient">
                 <div className="container">
                     <div className="section">
@@ -50,7 +45,6 @@ export const IndexPageTemplate = ({ image, title, mainpitch, description, intro 
 }
 
 IndexPageTemplate.propTypes = {
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     title: PropTypes.string,
     mainpitch: PropTypes.object,
     intro: PropTypes.shape({
@@ -63,12 +57,7 @@ const IndexPage = ({ data }) => {
 
     return (
         <Layout>
-            <IndexPageTemplate
-                image={frontmatter.image}
-                title={frontmatter.title}
-                mainpitch={frontmatter.mainpitch}
-                intro={frontmatter.intro}
-            />
+            <IndexPageTemplate title={frontmatter.title} mainpitch={frontmatter.mainpitch} intro={frontmatter.intro} />
         </Layout>
     )
 }
@@ -88,11 +77,6 @@ export const pageQuery = graphql`
         markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
             frontmatter {
                 title
-                image {
-                    childImageSharp {
-                        gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-                    }
-                }
                 mainpitch {
                     title
                     description
