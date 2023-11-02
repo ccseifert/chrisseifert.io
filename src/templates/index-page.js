@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
                                     </div>
                                 </div>
 
-                                <div id="blog-latest" className="column is-12">
+                                <div className="column is-12 blog-latest">
                                     <h3 className="has-text-weight-semibold is-size-4">Latest</h3>
                                     <BlogRoll />
                                     <div className="column is-12 has-text-centered">
