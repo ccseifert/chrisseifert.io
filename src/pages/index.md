@@ -14,7 +14,7 @@ intro:
   blurbs: []
   heading: a
   description: a
-title: Chris Writes Things
+title: I build impactful, cohesive development teams to solve difficult problems.
 main:
   heading: a
   description: a
