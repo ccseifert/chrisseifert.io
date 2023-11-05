@@ -1,13 +1,12 @@
 ---
-templateKey: index-page
-title: Chris Writes Things
-image: /img/apple-touch-icon.png
 heading: " a"
 subheading: a
+templateKey: index-page
+title: Chris Writes Things
 mainpitch:
   title: I build impactful, cohesive development teams to solve difficult problems.
   description: |-
-    I'm a Director of Engineering at 7shifts.
+    I'm a Director of Engineering at [7shifts](https://7shifts.com).
 
     I built the world's most popular database about comic books.
 
@@ -29,4 +28,5 @@ main:
   image3:
     alt: a
     image: /img/blog-index.jpg
+image: /img/apple-touch-icon.png
 ---
