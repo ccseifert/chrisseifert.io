@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
 import Layout from '../components/Layout'
+import Content, { HTMLContent } from '../components/Content'
 import BlogRoll from '../components/BlogRoll'
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
+export const IndexPageTemplate = ({ title, content, contentComponent }) => {
+    const PageContent = contentComponent || Content
+
     return (
         <div>
             <section className="section section--gradient">
@@ -16,10 +18,12 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
                             <div className="content">
                                 <div className="content">
                                     <div className="tile">
-                                        <h1 className="title">{mainpitch.title}</h1>
+                                        <h1 className="title">{title}</h1>
                                     </div>
                                     <div className="tile">
-                                        <h3 className="subtitle">{mainpitch.description}</h3>
+                                        <h3 className="subtitle">
+                                            <PageContent className="content" content={content} />
+                                        </h3>
                                     </div>
                                 </div>
 
@@ -27,7 +31,7 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
                                     <h3 className="has-text-weight-semibold is-size-4">Latest</h3>
                                     <BlogRoll />
                                     <div className="column is-12 has-text-centered">
-                                        <Link className="btn" to="/blog">
+                                        <Link classname="btn" to="/blog">
                                             Read more
                                         </Link>
                                     </div>
@@ -42,53 +46,33 @@ export const IndexPageTemplate = ({ title, mainpitch, description, intro }) => {
 }
 
 IndexPageTemplate.propTypes = {
-    title: PropTypes.string,
-    mainpitch: PropTypes.object,
-    intro: PropTypes.shape({
-        blurbs: PropTypes.array,
-    }),
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string,
+    contentComponent: PropTypes.func,
 }
 
 const IndexPage = ({ data }) => {
-    const { frontmatter } = data.markdownRemark
+    const { markdownRemark: post } = data
 
     return (
         <Layout>
-            <IndexPageTemplate title={frontmatter.title} mainpitch={frontmatter.mainpitch} intro={frontmatter.intro} />
+            <IndexPageTemplate contentComponent={HTMLContent} title={post.frontmatter.title} content={post.html} />
         </Layout>
     )
 }
 
 IndexPage.propTypes = {
-    data: PropTypes.shape({
-        markdownRemark: PropTypes.shape({
-            frontmatter: PropTypes.object,
-        }),
-    }),
+    data: PropTypes.object.isRequired,
 }
 
 export default IndexPage
 
 export const pageQuery = graphql`
-    query IndexPageTemplate {
-        markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    query IndexPage($id: String!) {
+        markdownRemark(id: { eq: $id }) {
+            html
             frontmatter {
                 title
-                mainpitch {
-                    title
-                    description
-                }
-                description
-                intro {
-                    blurbs {
-                        image {
-                            childImageSharp {
-                                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-                            }
-                        }
-                        text
-                    }
-                }
             }
         }
     }
