@@ -6,6 +6,6 @@ title: I build impactful, cohesive development teams to solve difficult problems
 ---
 I'm a Director of Engineering at [7shifts](https://7shifts.com).
 
-I built the world's most popular database about comic books.
+I built the world's most popular database about comic books at ComicBookDB.
 
-You can find me on LinkedIn.
+You can find me on [LinkedIn](https://www.linkedin.com/in/seifertchris/).
