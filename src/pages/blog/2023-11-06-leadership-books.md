@@ -2,10 +2,7 @@
 templateKey: blog-post
 title: Leadership Books
 date: 2023-11-06T03:45:42.784Z
-description: One of the most common questions I get is for recommendations of
-  reading material around leadership. Below is a quick hit list of some of the
-  recommendations I typically suggest. All of these are excellent and there are
-  many, many more. I hope you find something useful here!
+description: " "
 featuredpost: true
 featuredimage: /img/management-books.jpg
 tags:
@@ -13,6 +10,8 @@ tags:
   - books
 ---
 ![A few excellent books](/img/management-books.jpg "A few excellent books")
+
+One of the most common questions I get is for recommendations of reading material around leadership. Below is a quick hit list of some of the recommendations I typically suggest. All of these are excellent and there are many, many more. I hope you find something useful here!
 
 ### For Aspiring Managers
 
