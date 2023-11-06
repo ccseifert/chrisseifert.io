@@ -7,12 +7,11 @@ export default class BlogIndexPage extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="full-width-image-container margin-top-0">
+                <div className="margin-top-0">
                     <h1
-                        className="has-text-weight-bold is-size-1"
+                        className="headline-container has-text-weight-bold is-size-1"
                         style={{
                             color: 'black',
-                            padding: '1rem',
                         }}
                     >
                         Latest Posts
