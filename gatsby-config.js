@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: 'Personal website of Chris Seifert',
+        title: 'Chris Writes Things',
         description: 'Random blatherings of some guy in Canada.',
     },
     plugins: [
