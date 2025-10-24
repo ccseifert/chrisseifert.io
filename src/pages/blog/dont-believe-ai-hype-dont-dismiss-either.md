@@ -34,8 +34,6 @@ To be fair, figuring out the answers to these questions requires experimentation
 
 If the only reason for doing something is to say that your engineers are using AI, you are falling victim to the hype. The focus must always be on the tangible improvement in development and operational outcomes, not the tool itself.
 
----
-
 ## The Naysayer Trap
 
 On the flip side, the opposite danger is organizational inertia masked as caution. This often comes from a place of experience: leaders who have seen past 'productivity boosts' come and go and assume this is just another fad.
@@ -48,8 +46,6 @@ For those prone to pessimism, the challenge is reframing the conversation away f
 * How would our team's ability to focus on complex, novel problems change if we could automate a core, time-consuming task like writing unit tests?
 * Are there low-risk areas like internal wiki maintenance or ticket summarization that we could use to experiment and build internal competency?
 * What is the long term cost to developer morale and retention of doing nothing while everyone else gains efficiency?
-
----
 
 ## The Pragmatic Middle Ground
 
