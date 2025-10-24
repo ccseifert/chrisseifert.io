@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import useSiteMetadata from "../components/SiteMetadata";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -55,8 +56,10 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 };
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data;
+  const { siteUrl } = useSiteMetadata();
+  const postUrl = `${siteUrl}${location.pathname}`;
 
   return (
     <Layout>
@@ -77,6 +80,7 @@ const BlogPost = ({ data }) => {
               content={`${post.frontmatter.description}`}
             />
             <meta property="og:type" content="article" />
+            <meta property="og:url" content={postUrl} />
           </Helmet>
         }
         tags={post.frontmatter.tags}

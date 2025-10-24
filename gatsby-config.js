@@ -2,6 +2,7 @@ module.exports = {
     siteMetadata: {
         title: 'Chris Writes Things',
         description: 'Random blatherings of some guy in Canada.',
+        siteUrl: 'https://chrisseifert.io',
     },
     plugins: [
         'gatsby-plugin-react-helmet',
