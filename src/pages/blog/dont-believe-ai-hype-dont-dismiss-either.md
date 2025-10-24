@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Don't Believe the AI Hype. Don't Dismiss It Either.
 date: 2025-10-23T03:45:42.784Z
-description: " "
+description: "As engineering leaders, our job is not to be a cheerleader for AI or a doomsayer about job security. Our job is to be strategically pragmatic. We have to find the narrow path between swallowing the hype and rejecting the pessimism entirely so we can focus our teams on building things that matter."
 featuredpost: true
 featuredimage: /img/ai-city.png
 tags:

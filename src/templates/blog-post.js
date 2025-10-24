@@ -71,16 +71,13 @@ const BlogPost = ({ data, location }) => {
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name="description" property="og:description"
               content={`${post.frontmatter.description}`}
             />
-            <meta property="og:title" content={`${post.frontmatter.title}`} />
-            <meta
-              property="og:description"
-              content={`${post.frontmatter.description}`}
-            />
+            <meta name="title" property="og:title" content={`${post.frontmatter.title}`} />
             <meta property="og:type" content="article" />
             <meta property="og:url" content={postUrl} />
+            <meta name="image" property="og:image" content={`${post.frontmatter.featuredimage}`}></meta>
           </Helmet>
         }
         tags={post.frontmatter.tags}
