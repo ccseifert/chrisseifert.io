@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Don't Go Chasing AI Waterfalls
-date: 2025-11-12T03:45:42.784Z
+date: 2025-11-10T03:45:42.784Z
 description: "The challenge for engineering leadership isn't to achieve some grand AI vision, but to provide the focus and enablement that allows developers to extract maximum value from specific investments."
 featuredpost: true
 featuredimage: /img/ai-post-waterfalls.jpg
@@ -9,7 +9,7 @@ tags:
   - leadership
   - ai
 ---
-![AI City](/img/ai-city.png "AI City")
+![AI Waterfalls](/img/ai-post-waterfalls.jpg "AI Waterfalls")
 
 I was recently in a 1:1 meeting with a developer when he told me, "I removed the AI extensions from my code editor".
 
